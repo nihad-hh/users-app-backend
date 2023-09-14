@@ -12,9 +12,9 @@ import java.util.Map;
 @ControllerAdvice
 public class UserNotFoundAdvice {
     @ResponseBody
-    @ExceptionHandler(UserNotFoundExeption.class)
+    @ExceptionHandler(UserNotFoundException.class)
     @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String, String> exceptionHandler(UserNotFoundExeption exception){
+    public Map<String, String> exceptionHandler(UserNotFoundException exception){
         Map<String, String> errorMap = new HashMap<>();
         errorMap.put("errorMessage", exception.getMessage());
 
